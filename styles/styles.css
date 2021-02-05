@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  /* Colors */
+  --primary-violet: hsl(257, 40%, 49%);
+  --primary-soft-magenta: hsl(300, 69%, 71%);
+  /* Typography */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--primary-violet);
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  padding: 4rem;
+  max-width: 130rem;
+  margin: auto;
+}
+
+.logo {
+  width: 13rem;
+}
+
+.hero {
+  padding: 5rem 0;
+  display: grid;
+  gap: 6rem;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+}
+
+.hero-content p {
+  font-size: 1.55rem;
+  padding: 2rem 0;
+}
+
+.hero-content a {
+  background-color: #fff;
+  box-shadow: 2px 4px 9px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem 7rem;
+  border-radius: 4rem;
+}
+
+.hero-content a:hover {
+  background-color: var(--primary-soft-magenta);
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.social-links a {
+  color: #fff;
+  border: 1px #fff solid;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: grid;
+  place-content: center;
+}
+
+.social-links a:hover {
+  color: var(--primary-soft-magenta);
+  border: 1px var(--primary-soft-magenta) solid;
+}
+
+@media only screen and (min-width: 500px) {
+  .wrapper {
+    padding: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-position: center;
+    background-size: cover;
+  }
+  .logo {
+    width: 18rem;
+  }
+  .hero {
+    grid-template-columns: 1fr 0.7fr;
+    align-items: center;
+  }
+  .hero-content {
+    text-align: left;
+  }
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  .hero-content p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+  .social-links {
+    justify-content: flex-end;
+  }
+}
